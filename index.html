@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <script type="module">
+      if (!("anchorName" in document.documentElement.style)) {
+        import("https://unpkg.com/@oddbird/css-anchor-positioning");
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <button class="nav-burger" title="nav-hamburger"></button>
+        <picture class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </picture>
+        <ul class="nav-list">
+          <li class="list-item"><a href="">Collections</a></li>
+          <li class="list-item"><a href="">Men</a></li>
+          <li class="list-item"><a href="">Women</a></li>
+          <li class="list-item"><a href="">About</a></li>
+          <li class="list-item"><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div class="cart-control">
+        <button popovertarget="main-cart" class="cart-btn" title="cart">
+          <span class="number-of-items">0</span>
+          <div id="main-cart" popover class="cart-holder">
+            <p class="cart-title">Cart</p>
+            <p class="empty-cart">Your Cart Is Empty</p>
+          </div>
+        </button>
+        <picture>
+          <img src="images/image-avatar.png" alt="profile" />
+        </picture>
+      </div>
+    </nav>
+    <main>
+      <section class="slider">
+        <button popovertarget="lightbox" class="pop-toggle">
+          <div class="larger-img">
+            <img
+              class="shown-img"
+              src="images/image-product-1.jpg"
+              alt="thumb"
+            />
+          </div>
+        </button>
+        <div class="wrapper-large">
+          <figure id="item-1" class="slider-item">
+            <img src="images/image-product-1.jpg" alt="" />
+          </figure>
+          <figure id="item-2" class="slider-item">
+            <img src="images/image-product-2.jpg" alt="" />
+          </figure>
+          <figure id="item-3" class="slider-item">
+            <img src="images/image-product-3.jpg" alt="" />
+          </figure>
+          <figure id="item-4" class="slider-item">
+            <img src="images/image-product-4.jpg" alt="" />
+          </figure>
+        </div>
+        <button class="next"></button>
+        <button class="previous"></button>
+      </section>
+      <section class="product-control">
+        <div class="product-info">
+          <h1>Sneaker Company</h1>
+          <p class="bold-text">Fall Limited Edition Sneakers</p>
+          <p class="long-text">
+            hese low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+        <div class="money">
+          <p class="price">$125.00<span class="discount">50%</span></p>
+          <p class="og-price">$250.00</p>
+        </div>
+        <div class="add-to-cart">
+          <div class="cart-controls">
+            <img class="minus" src="images/icon-minus.svg" alt="minus" />
+            <p>0</p>
+            <img class="plus" src="images/icon-plus.svg" alt="plus" />
+          </div>
+          <button title="add-to-cart">
+            <!-- <img src="images/icon-cart.svg" alt="cart" /> -->
+            <svg
+              class="btn-cart"
+              width="22"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="currentColor"
+                fill-rule="nonzero"
+              />
+            </svg>
+            Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+    <section popover id="lightbox">
+      <div class="wrapper">
+        <div class="larger-img1-pop">
+          <img
+            class="shown-img-pop"
+            src="images/image-product-1.jpg"
+            alt="thumb"
+          />
+          <button class="next-pop"></button>
+          <button class="previous-pop"></button>
+        </div>
+        <figure id="item-1-pop" class="slider-item-pop">
+          <img src="images/image-product-1.jpg" alt="" />
+        </figure>
+        <figure id="item-2-pop" class="slider-item-pop">
+          <img src="images/image-product-2.jpg" alt="" />
+        </figure>
+        <figure id="item-3-pop" class="slider-item-pop">
+          <img src="images/image-product-3.jpg" alt="" />
+        </figure>
+        <figure id="item-4-pop" class="slider-item-pop">
+          <img src="images/image-product-4.jpg" alt="" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
